@@ -32,12 +32,12 @@ nav .nav-links a:hover::after{width:100%}
 .hero-bg::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");opacity:.4}
 .flame-particle{position:absolute;border-radius:50%;background:radial-gradient(circle,#ff7b3d,transparent);animation:floatUp 6s ease-in-out infinite;opacity:0}
 @keyframes floatUp{0%{transform:translateY(100vh) scale(0);opacity:0}20%{opacity:.6}80%{opacity:.3}100%{transform:translateY(-20vh) scale(1.5);opacity:0}}
-.hero-content{position:relative;z-index:1;text-align:center;max-width:900px}
+.hero-content{position:relative;z-index:1;text-align:center;width:100%;max-width:900px;min-width:0}
 .hero-content .tag{display:inline-block;padding:8px 24px;border:1px solid rgba(255,123,61,.4);border-radius:50px;font-size:.85rem;color:#ff7b3d;margin-bottom:28px;letter-spacing:2px}
 .hero-content h1{font-size:4rem;font-weight:900;line-height:1.2;margin-bottom:16px;background:linear-gradient(135deg,#fff 0%,#ffb088 50%,#ff7b3d 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-content h1 .en{display:block;font-size:1.8rem;font-weight:300;-webkit-text-fill-color:#7a8090;letter-spacing:4px;margin-bottom:8px}
-.hero-content .subtitle{font-size:1.2rem;color:#8a90a8;margin-bottom:40px;line-height:1.8}
-.hero-content .cta-group{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.hero-content .subtitle{font-size:1.2rem;color:#8a90a8;margin-bottom:40px;line-height:1.8;overflow-wrap:anywhere}
+.hero-content .cta-group{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;width:100%}
 .hero-content .cta{padding:14px 36px;border-radius:50px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block}
 .cta-primary{background:linear-gradient(135deg,#ff7b3d,#e05520);color:#fff;box-shadow:0 8px 30px rgba(255,123,61,.3)}
 .cta-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,123,61,.5)}
@@ -168,10 +168,10 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">关于我们</a></li>
     <li><a href="#mission">使命愿景</a></li>
-    <li><a href="#projects">公司业绩</a></li>
-    <li><a href="#tech">核心技术</a></li>
-    <li><a href="#radiant">最新技术</a></li>
-    <li><a href="#ai">AI 未来</a></li>
+    <li><a href="#projects">经验领域</a></li>
+    <li><a href="#tech">核心能力</a></li>
+    <li><a href="#radiant">工程能力</a></li>
+    <li><a href="#ai">AI 方向</a></li>
     <li><a href="#contact">联系我们</a></li>
   </ul>
   <div class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
@@ -190,12 +190,12 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
       星焰智能
     </h1>
     <p class="subtitle">
-      二十年武钢炉火淬炼 · 硅钢环形炉 / CA 加热炉 / CA 干燥炉 / CT 炉 / 热轧加热炉<br>
-      从仪表燃烧控制到 AI 智能决策，为每一座工业炉注入灵魂
+      二十年大型钢铁企业现场经验 · 硅钢与热轧工业炉仪表燃烧控制<br>
+      覆盖多类炉型，从控制设计、编程调试到智能优化持续积累
     </p>
     <div class="cta-group">
-      <a href="#tech" class="cta cta-primary">核心技术</a>
-      <a href="#radiant" class="cta cta-outline">最新技术</a>
+      <a href="#tech" class="cta cta-primary">核心能力</a>
+      <a href="#projects" class="cta cta-outline">经验领域</a>
       <a href="#contact" class="cta cta-outline">联系我们</a>
     </div>
   </div>
@@ -209,35 +209,36 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
   <div class="about-grid">
     <div class="about-text">
       <p>
-        <strong style="color:#ff7b3d">星焰智能（StarFlame AI）</strong>是一家专注于工业炉仪表燃烧控制与智能化升级的高科技企业。
-        公司核心技术团队源自<strong>武钢硅钢项目</strong>，在工业炉燃烧控制领域拥有超过二十年的现场经验。
+        <strong style="color:#ff7b3d">星焰智能（StarFlame AI）</strong>成立于 2026 年，总部位于中国武汉，
+        是一家专注于工业炉仪表燃烧控制与智能化升级的高科技企业。
+        核心技术团队拥有超过二十年的大型钢铁企业现场经验，长期聚焦硅钢与热轧工业炉控制。
       </p>
       <p>
-        我们专注于<strong>仪表控制部分</strong>——这是每一座工业炉的"大脑"和"神经系统"。
-        从硅钢环形炉的温度均匀性控制，到 CA 生产线加热炉的多段炉温协调，再到 CA 干燥炉的气氛安全联锁——
-        我们在每一座炉子的火焰背后，写下了成千上万行精密控制代码。
+        我们专注于工业炉的<strong>仪表、燃烧与过程控制</strong>，工作范围覆盖控制方案设计、程序开发、
+        现场调试、运行优化和技术支持。团队经验涉及硅钢生产线干燥炉、加热炉、无氧化炉、环形炉、AJF，
+        以及热轧生产线加热炉等炉型。
       </p>
       <p>
-        公司以"<strong>仪表燃烧控制 + AI 智能决策</strong>"为双引擎，致力于让中国工业炉的控制水平从"手动看火"迈向"全自主最优运行"。
-        未来，我们还将把地球上积累的燃烧控制智慧带上月球与火星，为人类地外金属冶炼提供炉控软件。
+        公司以"<strong>仪表燃烧控制 + 数据智能</strong>"为发展方向，坚持安全优先、现场验证和工程可交付。
+        未来将持续向更多工业炉和过程控制场景拓展，并通过 AI 辅助优化提升工业炉的安全性、稳定性和能源效率。
       </p>
     </div>
     <div class="about-stats">
       <div class="stat-card">
         <div class="num">20+</div>
-        <div class="label">年武钢现场经验</div>
+        <div class="label">年现场控制经验</div>
       </div>
       <div class="stat-card">
-        <div class="num">5</div>
-        <div class="label">大类工业炉全覆盖</div>
+        <div class="num">6+</div>
+        <div class="label">类工业炉经验方向</div>
       </div>
       <div class="stat-card">
-        <div class="num">100+</div>
-        <div class="label">控制回路设计调试</div>
+        <div class="num">全流程</div>
+        <div class="label">设计 · 编程 · 调试</div>
       </div>
       <div class="stat-card">
-        <div class="num">0</div>
-        <div class="label">安全事故记录</div>
+        <div class="num">武汉</div>
+        <div class="label">2026 年成立</div>
       </div>
     </div>
   </div>
@@ -257,7 +258,7 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
     <div class="mvv-card">
       <div class="icon">🌌</div>
       <h3>愿景 Vision</h3>
-      <p>成为中国工业炉智能燃烧控制领域的第一品牌。从长江边的钢厂到月球极地的熔炼基地——我们的控制软件，将驱动人类文明在每一颗星球上的"第一把火"。</p>
+      <p>成为中国工业炉智能燃烧控制领域的专业品牌。以可靠、可验证、可持续的工业软件，服务钢铁行业智能化升级。</p>
     </div>
     <div class="mvv-card">
       <div class="icon">💎</div>
@@ -269,91 +270,88 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
 
 <!-- ═══════════════ PROJECTS ═══════════════ -->
 <section id="projects">
-  <div class="section-label">PROJECTS & ACHIEVEMENTS</div>
-  <div class="section-title">公司业绩</div>
+  <div class="section-label">EXPERIENCE & DOMAINS</div>
+  <div class="section-title">经验领域</div>
   <div class="section-desc">
-    核心团队在武钢硅钢项目中承担了多类工业炉的仪表燃烧控制系统设计与调试，积累了从环形炉到热轧加热炉的全品类炉控经验。
+    基于大型钢铁企业现场经验，按生产线和炉型持续沉淀仪表燃烧控制方法论。以下内容仅展示能力范围，不涉及客户项目和技术细节。
   </div>
   <div class="section-divider"></div>
   <div class="projects-grid">
     <div class="project-card">
-      <div class="project-tag">硅钢 · 核心项目</div>
-      <h4>硅钢环形炉</h4>
-      <div class="location">📍 武钢硅钢厂</div>
+      <div class="project-tag">硅钢线 · 干燥炉</div>
+      <h4>干燥炉燃烧控制</h4>
+      <div class="location">硅钢及涂镀生产线</div>
       <ul>
-        <li>全炉温度均匀性控制 —— 料温偏差 ±3°C</li>
-        <li>旋转密封漏风补偿控制</li>
-        <li>多段燃烧分区协调控制</li>
-        <li>仪表系统全套设计、编程、调试</li>
+        <li>多段炉温与炉压协调</li>
+        <li>燃烧安全与工况切换</li>
+        <li>比例与脉冲控制应用</li>
+        <li>现场调试与运行优化</li>
       </ul>
     </div>
     <div class="project-card">
-      <div class="project-tag">硅钢 · 核心项目</div>
-      <h4>CA 线加热炉</h4>
-      <div class="location">📍 武钢硅钢 CA 连退线</div>
+      <div class="project-tag">硅钢线 · 加热炉</div>
+      <h4>加热炉过程控制</h4>
+      <div class="location">硅钢连续生产线</div>
       <ul>
-        <li>多段炉温串级协调控制</li>
-        <li>空燃比双交叉限幅控制</li>
-        <li>速度前馈自适应控制</li>
-        <li>气氛（露点/氢含量）精确闭环</li>
+        <li>多段炉温协调控制</li>
+        <li>燃烧回路与安全设计</li>
+        <li>生产节奏联动控制</li>
+        <li>能耗与稳定性优化</li>
       </ul>
     </div>
     <div class="project-card">
-      <div class="project-tag">硅钢 · 核心项目</div>
-      <h4>CA 线干燥炉</h4>
-      <div class="location">📍 武钢硅钢 CA 涂层线</div>
+      <div class="project-tag">硅钢线 · 无氧化炉</div>
+      <h4>无氧化炉控制</h4>
+      <div class="location">硅钢热处理生产线</div>
       <ul>
-        <li>脉冲燃烧控制实现</li>
-        <li>溶剂蒸汽 LEL 安全联锁</li>
-        <li>炉压自适应精确控制</li>
-        <li>带宽方向温度均匀性优化</li>
+        <li>炉内气氛与温度协调</li>
+        <li>燃烧稳定与工艺联动</li>
+        <li>安全联锁与异常处理</li>
+        <li>控制系统集成调试</li>
       </ul>
     </div>
     <div class="project-card">
-      <div class="project-tag">硅钢 · 扩展项目</div>
-      <h4>CT 炉</h4>
-      <div class="location">📍 武钢硅钢厂</div>
+      <div class="project-tag">硅钢线 · 环形炉</div>
+      <h4>环形炉供热控制</h4>
+      <div class="location">硅钢热处理生产线</div>
       <ul>
-        <li>连续热处理炉燃烧控制</li>
-        <li>比例积分微分复合控制</li>
-        <li>多工况智能切换逻辑</li>
-        <li>仪表系统集成调试</li>
+        <li>分区供热与温度协调</li>
+        <li>间歇作业工况控制</li>
+        <li>炉压与燃烧稳定性</li>
+        <li>仪表系统设计与调试</li>
       </ul>
     </div>
     <div class="project-card">
-      <div class="project-tag">热轧 · 扩展项目</div>
+      <div class="project-tag">硅钢线 · AJF</div>
+      <h4>AJF 燃烧控制</h4>
+      <div class="location">硅钢生产线</div>
+      <ul>
+        <li>炉温与燃烧工况控制</li>
+        <li>工艺参数联动</li>
+        <li>安全联锁与报警</li>
+        <li>现场调试与优化</li>
+      </ul>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">热轧线 · 加热炉</div>
       <h4>热轧加热炉</h4>
-      <div class="location">📍 武钢热轧厂</div>
+      <div class="location">热轧生产线</div>
       <ul>
-        <li>大规模空燃比优化控制</li>
-        <li>炉膛压力自适应调节</li>
-        <li>多段炉温解耦控制</li>
-        <li>吨钢能耗优化（降 3-5%）</li>
+        <li>钢坯加热与炉段控制</li>
+        <li>燃烧系统协调控制</li>
+        <li>生产节奏适配</li>
+        <li>能效与稳定性优化</li>
       </ul>
     </div>
-        <div class="project-card" style="border-color:rgba(255,215,0,.5);background:rgba(255,180,0,.06)">
-      <div class="project-tag" style="background:rgba(255,180,0,.2);color:#ffb800">🔥 国产化 · 重大突破</div>
-      <h4>红太阳辐射烘烤炉 · 国产化替代</h4>
-      <div class="location">📍 新能源项目（已上线运行）</div>
+    <div class="project-card" style="border-color:rgba(255,215,0,.5);background:rgba(255,180,0,.06)">
+      <div class="project-tag" style="background:rgba(255,180,0,.2);color:#ffb800">辐射加热 · 国产化控制</div>
+      <h4>辐射烘烤炉控制系统</h4>
+      <div class="location">新能源及连续热处理场景</div>
       <ul>
-        <li>🔧 基于西门子 S7-1500 + 博图 CFC 开发</li>
-        <li>📐 模型计算功率控制（替代传统明火脉冲）</li>
-        <li>🎯 二级数据驱动功率/烧嘴/风压联动</li>
-        <li>🏆 国内首次完成同款国产化，运行 1 月效果良好</li>
-      </ul>
-    </div>
-
-<div class="project-card" style="border-color:rgba(255,123,61,.3);background:rgba(255,123,61,.04)">
-      <div class="project-tag" style="background:rgba(255,123,61,.25)">全部炉型统计</div>
-      <h4>六大炉型 · 全品类覆盖</h4>
-      <div class="location">综合业绩汇总</div>
-      <ul>
-        <li>🔵 环形炉（硅钢）</li>
-        <li>🔵 CA 加热炉（硅钢连退线）</li>
-        <li>🔵 CA 干燥炉（硅钢涂层线）</li>
-        <li>🔵 CT 炉（硅钢热处理）</li>
-        <li>🔵 热轧加热炉（热轧线）</li>
-        <li>🟠 红太阳辐射烘烤炉（新能源·国产化）</li>
+        <li>辐射加热工艺控制</li>
+        <li>控制系统国产化替代</li>
+        <li>现场投运与调试验证</li>
+        <li>工程经验沉淀与复制</li>
       </ul>
     </div>
   </div>
@@ -361,199 +359,154 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
 
 <!-- ═══════════════ CORE TECHNOLOGIES ═══════════════ -->
 <section id="tech">
-  <div class="section-label">CORE TECHNOLOGIES</div>
-  <div class="section-title">核心技术</div>
+  <div class="section-label">CORE CAPABILITIES</div>
+  <div class="section-title">核心能力</div>
   <div class="section-desc">
-    二十年的炉火经验，凝练为四大核心控制技术。每一项都在武钢的真实产线上经过千百次验证。
+    以现场经验为基础，将工业炉控制拆解为可设计、可调试、可验证、可持续优化的工程能力。
   </div>
   <div class="section-divider"></div>
   <div class="tech-grid">
-    <!-- 脉冲比例控制 -->
     <div class="tech-card">
       <div class="tech-icon">📐</div>
-      <h4>脉冲比例控制</h4>
-      <div class="tech-subtitle">PULSE-PROPORTIONAL CONTROL</div>
-      <p>脉冲控制与比例控制的深度融合。在脉冲大火期间通过比例阀精确调节燃气/空气配比，在小火期间保持最小稳定火焰。兼顾了脉冲控制的火焰刚度优势和比例控制的空燃比精度。</p>
+      <h4>燃烧控制</h4>
+      <div class="tech-subtitle">COMBUSTION CONTROL</div>
+      <p>面向不同炉型和工况完成燃烧回路设计、控制方式选型、程序开发和现场调试，兼顾负荷适应性与运行安全。</p>
       <ul class="tech-features">
-        <li>大火 100% 功率 + 比例精确配气</li>
-        <li>小火维持火焰 + 切换零爆燃</li>
-        <li>适用于环形炉低负荷、高均匀性要求场景</li>
-        <li>空燃比偏差 ≤ ±2%，火焰刚度恒定</li>
+        <li>比例、脉冲及高低火控制应用</li>
+        <li>单烧嘴与分区协调控制</li>
+        <li>点火、火焰检测和安全联锁</li>
+        <li>工况切换与异常处理</li>
       </ul>
     </div>
-    <!-- 脉冲控制 -->
     <div class="tech-card">
-      <div class="tech-icon">⚡</div>
-      <h4>脉冲控制</h4>
-      <div class="tech-subtitle">PULSE FIRING CONTROL</div>
-      <p>通过调节烧嘴大火/小火的时间占空比来控制平均功率，替代传统的连续阀位调节。大火时火焰刚度满格，热风搅动剧烈，带宽温度均匀性显著提升。</p>
+      <div class="tech-icon">🌡️</div>
+      <h4>炉温与工艺联动</h4>
+      <div class="tech-subtitle">PROCESS COORDINATION</div>
+      <p>围绕温度、压力、流量、速度和工况变化建立协调控制逻辑，提高炉温稳定性和生产适应性。</p>
       <ul class="tech-features">
-        <li>占空比 1-100% 无级调节</li>
-        <li>错相分组消除炉压脉动（≤ ±5 Pa）</li>
-        <li>不受烧嘴物理调节比限制</li>
-        <li>干燥炉和加热炉低负荷工况首选方案</li>
+        <li>多段炉温协调控制</li>
+        <li>炉压和燃烧稳定性控制</li>
+        <li>生产节奏与负荷联动</li>
+        <li>运行参数优化</li>
       </ul>
     </div>
-    <!-- 比例控制 -->
     <div class="tech-card">
       <div class="tech-icon">⚖️</div>
-      <h4>比例控制</h4>
-      <div class="tech-subtitle">PROPORTIONAL CONTROL</div>
-      <p>工业炉燃烧控制的基石。通过燃气/空气调节阀的线性特性匹配，实现空燃比的精确跟踪。在恒温工况下提供最平滑、最稳定的温度控制输出。</p>
+      <h4>仪表与控制系统</h4>
+      <div class="tech-subtitle">INSTRUMENT & CONTROL SYSTEM</div>
+      <p>覆盖仪表选型、控制回路、PLC 程序、HMI 画面、报警联锁和现场调试，形成完整的工程交付能力。</p>
       <ul class="tech-features">
-        <li>双交叉限幅 —— 燃气与空气响应错序保护</li>
-        <li>热值波动在线补偿</li>
-        <li>CO 在线修正空燃比偏置</li>
-        <li>适用于恒温主段、连续稳定工况</li>
+        <li>仪表选型与控制回路设计</li>
+        <li>PLC 程序与 HMI 画面开发</li>
+        <li>阀门、风机和变频设备联动</li>
+        <li>报警、联锁和现场调试</li>
       </ul>
     </div>
-    <!-- 间拔控制 -->
     <div class="tech-card">
-      <div class="tech-icon">🏹</div>
-      <h4>间拔控制</h4>
-      <div class="tech-subtitle">INTERMITTENT DRAWING CONTROL</div>
-      <p>针对硅钢环形炉等间歇式进出料的炉型，开发的一套"间拔节奏—燃烧负荷"联动控制技术。根据钢卷的间拔节奏（入炉/出炉周期），自动调整各段烧嘴的功率输出，使炉温在周期性开关炉门的扰动下依然保持稳定。</p>
+      <div class="tech-icon">📊</div>
+      <h4>数据与智能应用</h4>
+      <div class="tech-subtitle">DATA & INTELLIGENT APPLICATION</div>
+      <p>在不影响生产安全的前提下采集运行数据，为设备监测、趋势分析、异常预警和辅助优化提供基础。</p>
       <ul class="tech-features">
-        <li>间拔节拍同步 —— 燃烧负荷与出料周期自动匹配</li>
-        <li>炉门开启时的热冲击前馈补偿</li>
-        <li>炉温在间拔全周期内偏差 ≤ ±5°C</li>
-        <li>适用于环形炉、罩式炉等间拔式作业炉型</li>
+        <li>运行数据采集与可视化</li>
+        <li>工况识别与趋势分析</li>
+        <li>设备状态和异常预警</li>
+        <li>AI 辅助优化探索</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════ 红太阳 RADIANT PANEL ═══════════════ -->
+<!-- ═══════════════ ENGINEERING CAPABILITY ═══════════════ -->
 <section id="radiant">
-  <div class="section-label">LATEST TECHNOLOGY</div>
-  <div class="section-title">最新技术 · 红太阳辐射板加热</div>
+  <div class="section-label">ENGINEERING CAPABILITY</div>
+  <div class="section-title">工程能力 · 辐射加热控制</div>
   <div class="section-desc" style="font-size:1.2rem;color:#ff7b3d;font-weight:600">
-    "红太阳"空煤气加热辐射板技术 —— 以辐射传热替代对流传热，重新定义带钢加热方式
+    面向辐射加热与烘烤工艺，提供控制系统设计、国产化替代、现场调试和运行优化能力
   </div>
   <div class="section-divider"></div>
   <div class="radiant-content">
     <div class="radiant-hero">
       <div class="radiant-text">
-        <h3>什么是<span class="highlight">"红太阳"</span>？</h3>
+        <h3>从工艺理解到<span class="highlight">可靠交付</span></h3>
         <p>
-          <strong>"红太阳"空煤气加热辐射板</strong>是一种革命性的带钢加热技术。
-          其核心原理是：<strong>将空煤气混合物在辐射板内部充分燃烧</strong>，使辐射板表面温度升至 800-1100°C，
-          产生强烈的红外辐射。带钢通过辐射板下方时，<strong>以纯辐射传热方式吸收热量</strong>，而非传统的热风对流。
+          辐射加热控制需要同时理解工艺温度制度、燃烧系统、设备特性和现场操作习惯。
+          我们基于实际工程经验，为不同项目提供针对性的控制方案。
         </p>
         <p>
-          与传统的热风循环加热相比，辐射板加热的<strong>传热效率高出 3-5 倍</strong>。
-          辐射能量直接穿透带钢表面边界层，不受循环风速度分布的限制，带宽方向加热更加均匀。
+          在国产化项目中，我们注重控制系统自主可控、现场可维护和后续可扩展，
+          并通过严格的调试和运行验证保证项目稳定投用。
         </p>
       </div>
       <div class="radiant-visual">
         <div class="glow"></div>
         <div class="panel-icon">🔥<br>⬇️<br>⬜⬜⬜⬜⬜<br>━━━━━<br>&nbsp;&nbsp;钢&nbsp;带&nbsp;&nbsp;</div>
-        <div class="panel-label">辐射板 → 红外辐射 → 带钢</div>
+        <div class="panel-label">工艺理解 → 控制设计 → 现场投运</div>
       </div>
     </div>
     <div class="radiant-features">
       <div class="radiant-feat">
         <div class="feat-icon">🔥</div>
-        <div class="feat-title">超高效传热</div>
-        <div class="feat-desc">辐射传热效率是传统对流换热的 3-5 倍，带钢升温速度大幅提升</div>
+        <div class="feat-title">工艺理解</div>
+        <div class="feat-desc">围绕温度制度、燃烧系统和生产节奏设计控制逻辑</div>
       </div>
       <div class="radiant-feat">
         <div class="feat-icon">🎯</div>
-        <div class="feat-title">极致温度均匀</div>
-        <div class="feat-desc">辐射能量分布均匀，带宽方向温差 ≤ ±2°C，杜绝边缘过烧</div>
+        <div class="feat-title">国产控制</div>
+        <div class="feat-desc">支持控制系统自主设计、开发和国产化替代</div>
       </div>
       <div class="radiant-feat">
-        <div class="feat-icon">💨</div>
-        <div class="feat-title">空煤气预混燃烧</div>
-        <div class="feat-desc">辐射板内部完全预混燃烧，CO 排放接近于零，NOx 显著低于传统烧嘴</div>
+        <div class="feat-icon">🛠️</div>
+        <div class="feat-title">现场交付</div>
+        <div class="feat-desc">覆盖编程、联调、投运、培训和运行支持</div>
       </div>
       <div class="radiant-feat">
         <div class="feat-icon">🛡️</div>
-        <div class="feat-title">无氧化加热</div>
-        <div class="feat-desc">辐射板隔绝火焰与带钢直接接触，配合保护气氛实现近零氧化加热</div>
+        <div class="feat-title">安全可靠</div>
+        <div class="feat-desc">以安全联锁、异常处理和可维护性为工程底线</div>
       </div>
     </div>
   </div>
 </section>
 
-
-    <div class="radiant-achievement" style="margin-top:48px;background:linear-gradient(135deg,rgba(255,180,0,.08),rgba(255,120,0,.04));border:1px solid rgba(255,180,0,.25);border-radius:20px;padding:40px 36px">
-      <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
-        <span style="font-size:2rem">🏆</span>
-        <div>
-          <h4 style="font-size:1.3rem;color:#ffb800;margin-bottom:4px">国产化技术成果</h4>
-          <span style="color:#8a90a8;font-size:.9rem">红太阳辐射烘烤炉 · 全国产自主可控</span>
-        </div>
-      </div>
-      <p style="color:#b0b8d0;font-size:1rem;line-height:1.9;margin-bottom:28px">
-        我们<strong style="color:#ffb800">率先完成</strong>了红太阳（国外设计）辐射烘烤炉的<strong style="color:#ffb800">全国产化替代</strong>。
-        基于<strong>西门子 S7-1500 控制器 + 博图 CFC</strong>开发，采用<strong>模型计算功率</strong>的先进控制方式——根据二级系统下发的工艺数据，
-        自动计算各段最优功率、智能选择烧嘴组合、精确设定空气压力，实现远超传统明火脉冲控制的效率。
-        该项目已在国内<strong>新能源项目上线运行近 1 个月</strong>，使用效果良好，<strong>目前国内暂无其他单位完成同款国产化</strong>。
-      </p>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
-        <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:20px 16px;text-align:center">
-          <div style="font-size:1.6rem;margin-bottom:6px">🖥️</div>
-          <div style="font-size:.9rem;color:#fff;font-weight:600;margin-bottom:4px">S7-1500 + CFC</div>
-          <div style="font-size:.75rem;color:#8a90a8">西门子博图平台</div>
-        </div>
-        <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:20px 16px;text-align:center">
-          <div style="font-size:1.6rem;margin-bottom:6px">📐</div>
-          <div style="font-size:.9rem;color:#fff;font-weight:600;margin-bottom:4px">模型功率控制</div>
-          <div style="font-size:.75rem;color:#8a90a8">二级数据驱动</div>
-        </div>
-        <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:20px 16px;text-align:center">
-          <div style="font-size:1.6rem;margin-bottom:6px">⚡</div>
-          <div style="font-size:.9rem;color:#fff;font-weight:600;margin-bottom:4px">效率远超脉冲</div>
-          <div style="font-size:.75rem;color:#8a90a8">超越传统控制方式</div>
-        </div>
-        <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:20px 16px;text-align:center">
-          <div style="font-size:1.6rem;margin-bottom:6px">🥇</div>
-          <div style="font-size:.9rem;color:#fff;font-weight:600;margin-bottom:4px">国内首家</div>
-          <div style="font-size:.75rem;color:#8a90a8">暂无其他单位完成</div>
-        </div>
-      </div>
-    </div>
-
-
 <!-- ═══════════════ AI FUTURE ═══════════════ -->
 <section id="ai">
-  <div class="section-label">AI INTEGRATION</div>
-  <div class="section-title">未来 · AI 赋能燃烧控制</div>
+  <div class="section-label">AI & DIGITALIZATION</div>
+  <div class="section-title">AI 与数字化方向</div>
   <div class="section-desc">
-    我们将二十年积累的燃烧控制经验与人工智能深度融合，打造下一代"会思考的炉子"。
+    以现场数据为基础，探索 AI 在工业炉监测、诊断和辅助优化中的应用，坚持人工可控、安全优先。
   </div>
   <div class="section-divider"></div>
   <div class="ai-grid">
     <div class="ai-card">
       <div class="ai-icon">🧠</div>
-      <h4>AI 自主调参</h4>
-      <p>基于强化学习的 PID 参数在线自寻优。炉子在不同工况、不同钢种下自动找到最优控制参数，替代人工反复试凑。</p>
+      <h4>工况识别</h4>
+      <p>基于运行数据识别升温、保温、低负荷和异常工况，为控制策略切换和操作建议提供依据。</p>
     </div>
     <div class="ai-card">
-      <div class="ai-icon">🪞</div>
-      <h4>数字孪生仿真</h4>
-      <p>建立每一座炉子的高精度数字模型。新控制策略先在"数字炉"中模拟验证，验证通过再上线——零风险迭代。</p>
+      <div class="ai-icon">📈</div>
+      <h4>趋势分析</h4>
+      <p>对温度、压力、流量和设备状态进行趋势分析，帮助现场更早发现运行偏差。</p>
     </div>
     <div class="ai-card">
       <div class="ai-icon">🔮</div>
-      <h4>预测性维护</h4>
-      <p>基于烧嘴劣化趋势模型和时序异常检测，在烧嘴、阀门、风机出问题之前提前预警。从"坏了修"到"永不坏"。</p>
+      <h4>异常预警</h4>
+      <p>结合历史数据和设备状态开展异常检测探索，为维护和运行决策提供辅助信息。</p>
     </div>
     <div class="ai-card">
       <div class="ai-icon">📊</div>
-      <h4>多炉协同优化</h4>
-      <p>AI 在产线级别全局优化——协调加热炉、干燥炉、CT 炉之间的热负荷分配，实现整条 CA 线的能耗最低化。</p>
+      <h4>能效分析</h4>
+      <p>围绕能耗、产量和质量指标建立分析视图，支持持续改进和节能评估。</p>
     </div>
     <div class="ai-card">
       <div class="ai-icon">🌱</div>
-      <h4>碳足迹追踪</h4>
-      <p>每卷钢从入炉到出炉的精确碳排放计算与实时追踪，为企业碳交易和绿色制造提供数据支撑。</p>
+      <h4>碳数据管理</h4>
+      <p>探索生产过程中的能源与碳数据统计方法，为绿色制造和精益管理提供数据基础。</p>
     </div>
     <div class="ai-card">
       <div class="ai-icon">🌍</div>
-      <h4>星焰 OS 平台</h4>
-      <p>"焰芯"边缘控制 + "焰瞳"炉况监测 + "焰脑"AI 决策 —— 三位一体的工业炉智能操作系统。从地球到月球，一套代码通吃。</p>
+      <h4>星焰 OS 规划</h4>
+      <p>围绕边缘控制、炉况监测和数据智能，逐步形成可复制的工业炉软件平台。</p>
     </div>
   </div>
 </section>
@@ -568,9 +521,8 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
     <p style="color:#5a6080;margin-bottom:24px">StarFlame AI Technology Co., Ltd.</p>
     <ul class="contact-info">
       <li>📍 总部：中国 · 武汉</li>
-      <li>🏭 核心客户：武钢（宝武集团）</li>
-      <li>📧 业务咨询：（待定）</li>
-      <li>🌐 官网：（待注册）</li>
+      <li>🏭 业务领域：工业炉仪表燃烧控制与智能化</li>
+      <li>🌐 官网：<a href="https://siinaiiovalle-droid.github.io/starflame-ai/">siinaiiovalle-droid.github.io/starflame-ai</a></li>
     </ul>
   </div>
 </section>
