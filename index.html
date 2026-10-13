@@ -83,6 +83,9 @@ section{padding:100px 60px;position:relative}
 .project-card ul{list-style:none;padding:0}
 .project-card ul li{color:#aab0c0;font-size:.9rem;padding:4px 0;padding-left:18px;position:relative}
 .project-card ul li::before{content:'▸';position:absolute;left:0;color:#ff7b3d;font-size:.7rem;top:5px}
+.hotrolling-block{margin-top:72px;padding-top:56px;border-top:1px solid rgba(255,255,255,.06)}
+.hotrolling-block .section-title{font-size:2rem}
+.hotrolling-card{border-color:rgba(255,123,61,.18);background:rgba(255,123,61,.025)}
 .expansion-block{margin-top:72px;padding-top:56px;border-top:1px solid rgba(255,255,255,.06)}
 .expansion-block .section-title{font-size:2rem}
 .direction-card{border-style:dashed;background:rgba(0,180,255,.025)}
@@ -174,6 +177,7 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
     <li><a href="#about">关于我们</a></li>
     <li><a href="#mission">使命愿景</a></li>
     <li><a href="#projects">经验领域</a></li>
+    <li><a href="#hotrolling">热轧炉</a></li>
     <li><a href="#expansion">拓展方向</a></li>
     <li><a href="#tech">核心能力</a></li>
     <li><a href="#radiant">工程能力</a></li>
@@ -359,6 +363,55 @@ footer .tagline{margin-top:8px;color:#ff7b3d;font-size:.9rem}
         <li>现场投运与调试验证</li>
         <li>工程经验沉淀与复制</li>
       </ul>
+    </div>
+  </div>
+  <div id="hotrolling" class="hotrolling-block">
+    <div class="section-label">HOT ROLLING REHEATING FURNACE</div>
+    <div class="section-title">热轧加热炉控制</div>
+    <div class="section-desc">
+      面向步进梁式热轧加热炉，围绕炉温、烧嘴、炉门、炉压和煤气管网建立协同控制。具体逻辑和参数按项目现场条件设计。
+    </div>
+    <div class="projects-grid">
+      <div class="project-card hotrolling-card">
+        <div class="project-tag">炉体 · 步进梁</div>
+        <h4>步进梁与炉段控制</h4>
+        <ul>
+          <li>步进梁运行周期与炉温协调</li>
+          <li>多炉段温度控制与负荷分配</li>
+          <li>钢坯输送节奏与生产工况适配</li>
+          <li>待轧、停机和换辊工况处理</li>
+        </ul>
+      </div>
+      <div class="project-card hotrolling-card">
+        <div class="project-tag">烧嘴 · 程序直控</div>
+        <h4>无独立烧嘴控制器</h4>
+        <ul>
+          <li>由 PLC 程序直接控制烧嘴相关设备</li>
+          <li>点火、运行、停止和故障状态管理</li>
+          <li>火焰检测与燃气切断联动</li>
+          <li>单支烧嘴故障定位和隔离</li>
+        </ul>
+      </div>
+      <div class="project-card hotrolling-card">
+        <div class="project-tag">燃烧 · 多模式</div>
+        <h4>比例 · 脉冲 · 间拔</h4>
+        <ul>
+          <li>比例控制：连续稳定调节</li>
+          <li>脉冲控制：低负荷和热量均匀性</li>
+          <li>间拔控制：适应生产节拍变化</li>
+          <li>按炉段和工况进行模式管理</li>
+        </ul>
+      </div>
+      <div class="project-card hotrolling-card">
+        <div class="project-tag">炉压 · 煤气</div>
+        <h4>炉门与煤气管网协同</h4>
+        <ul>
+          <li>炉门开闭期间炉压前馈与恢复</li>
+          <li>煤气总管压力稳定控制</li>
+          <li>支管分配、调节和切断控制</li>
+          <li>压力异常、熄火和紧急停车联锁</li>
+        </ul>
+      </div>
     </div>
   </div>
   <div id="expansion" class="expansion-block">
